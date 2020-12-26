@@ -2,7 +2,7 @@ version: "3.7"
 services:
   sql-server-db:
     container_name: sql-server-db
-    # image: mcr.microsoft.com/mssql/server:2017-latest
+    image: local-sql-server:latest
     build:
       context: .
       dockerfile: SqlServerDockerfile
