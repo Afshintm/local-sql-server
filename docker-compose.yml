@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  sql-server-db:
+    container_name: sql-server-db
+    # image: mcr.microsoft.com/mssql/server:2017-latest
+    build:
+      context: .
+      dockerfile: SqlServerDockerfile
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "M@nager1352"
+      ACCEPT_EULA: "Y"
+    volumes:
+      - ./mnt/mssql/data:/var/opt/mssql/data
+      - ./mnt/mssql/log:/var/opt/mssql/log
+      - ./mnt/mssql/secrets:/var/opt/mssql/secrets
+      - ./mnt/mssql/backups:/var/opt/mssql/backups
