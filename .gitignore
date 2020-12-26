@@ -247,7 +247,11 @@ ServiceFabricBackup/
 *.mdf
 *.ldf
 *.ndf
-
+*.xel
+*.trc
+errorlog
+errorlog.1
+machine-key
 # Business Intelligence projects
 *.rdl.data
 *.bim.layout
